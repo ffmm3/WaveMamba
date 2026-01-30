@@ -11,8 +11,7 @@ Python 3.8+
 PyTorch 1.8.1+
 CUDA 10.2+
 cuDNN 7.6.5+
-Additional libraries: tensorboard, einops, scikit-image, opencv-python, pytorch_msssim
-                                                                                                                                                      
+Additional libraries: tensorboard, einops, scikit-image, opencv-python, pytorch_msssim                                                     
                                                                                                                                                       
                                                                                                                                                       
 Installation Steps
@@ -30,3 +29,10 @@ git clone https://github.com/ffmm3/WaveMamba.git
 cd WaveMamba                                                                                                                                                      
 
                                                                                                                                                       
+Dataset Preparation
+Supported benchmark datasets (synthetic + real-world):
+Dataset	Type	Download Link
+RESIDE-6K	Synthetic	RESIDE Official Website
+Haze4K	Synthetic	Haze4K GitHub
+O-HAZE	Real-world	CVPRW 2018 Dataset
+I-HAZE	Real-world	ACIVS 2018 Dataset
