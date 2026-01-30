@@ -1,0 +1,32 @@
+WaveMamba is a frequency-aware state space network designed for image dehazing, specifically optimized for non-homogeneous haze scenarios. By leveraging a Learnable Lifting Wavelet Transform (LLWT), the model decomposes images into high- and low-frequency components, which are processed separately through a dual-path architecture. It restores global contrast and local details respectively, and dynamically integrates features via a density-aware fusion module to achieve high-quality image dehazing.
+Core Innovations:
+Learnable Lifting Wavelet Transform (LLWT): Adaptively decomposes frequency features to accurately separate haze-induced degradation patterns.
+Dual-Path Enhancement Architecture: Combines SS2D Mamba (for long-range dependency modeling in the low-frequency path) and edge-enhanced convolution (for detail restoration in the high-frequency path).
+Density-Aware Feature Fusion (DAFM): Dynamically adjusts feature fusion weights based on a predicted haze density mask, enabling adaptive restoration for non-homogeneous haze.
+Adaptive Multi-Task Loss: Balances reconstruction loss, frequency consistency loss, and perceptual loss using Exponential Moving Average (EMA) for stable training.
+
+                                                                                                                                                      
+Dependencies
+Python 3.8+
+PyTorch 1.8.1+
+CUDA 10.2+
+cuDNN 7.6.5+
+Additional libraries: tensorboard, einops, scikit-image, opencv-python, pytorch_msssim
+                                                                                                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+Installation Steps
+# Create a virtual environment (optional)
+conda create -n wavemamba python=3.8
+conda activate wavemamba
+
+# Install PyTorch and dependencies
+conda install pytorch=1.8.1 torchvision=0.9.1 cudatoolkit=10.2 -c pytorch
+pip install tensorboard einops scikit-image opencv-python pytorch_msssim
+pip install warmup-scheduler
+
+# Clone the repository
+git clone https://github.com/ffmm3/WaveMamba.git
+cd WaveMamba                                                                                                                                                      
+
+                                                                                                                                                      
